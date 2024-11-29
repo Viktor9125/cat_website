@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body bgcolor="1785eb">
+<h2 align="center">Добро пожаловать, {{user.username}}</h2>
+<p align="center">Эту страницу могут видеть только авторизованные пользователи.</p>
+<p align="center">Приют "Кошкодом" помогает котам.</p>
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <center><button type="submit">Выйти из аккаунта</button></center>
+    <div class="container">
+        <h1 align="center">Home</h1>
+        <nav>
+            <center><a href="http://127.0.0.1:8000/about_us/" rel="noopener noreferrer">О нас</a></center>
+            <center><a href="http://127.0.0.1:8000/how_help/" rel="noopener noreferrer">Как помочь</a></center>
+        </nav>
+    </div>
+
+</form>
+</body>
+</html>

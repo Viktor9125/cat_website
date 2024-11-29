@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logout_now</title>
+</head>
+<body bgcolor="0ff2e3">
+<h1>You have logged out of your account.</h1>
+<form method="post" action="http://127.0.0.1:8000/accounts/login/?next=/">
+    {% csrf_token %}
+    <button type="submit">Return to the login page</button>
+</form>
+</body>
+</html>
